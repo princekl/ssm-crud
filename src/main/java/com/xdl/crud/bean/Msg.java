@@ -35,6 +35,11 @@ public class Msg {
         msg.setMsg("失败");
         return msg;
     }
+    public Msg add(String key,Object value){
+        this.getExtend().put(key,value);
+        return this;
+
+    }
 
     public int getCode() {
         return code;

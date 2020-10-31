@@ -1,11 +1,6 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: zhukangle
-  Date: 2020/10/26
-  Time: 8:49 下午
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+         pageEncoding="UTF-8"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -18,11 +13,15 @@
 以/开始的相对路径，找资源，以服务器的路径为标准(http://localhost:3306)；需要加上项目名
 		http://localhost:3306/crud
  -->
-    <%--    引入jquery--%>
-<script type="text/javascript" src="${APP_PATH}/static/js/jquery.min.js"></script>
-    <%--    引入样式--%>
-<link href="${APP_PATH}/static/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
-<script src="${APP_PATH}/static/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+<%--        引入jquery--%>
+    <script type="text/javascript"
+            src="${APP_PATH }/static/js/jquery.min.js"></script>
+    <link
+            href="${APP_PATH }/static/bootstrap-3.3.7-dist/css/bootstrap.min.css"
+            rel="stylesheet">
+    <script
+            src="${APP_PATH }/static/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+
 </head>
 <body>
 <!-- 搭建显示页面 -->
@@ -58,7 +57,7 @@
                         <th>${emp.empName }</th>
                         <th>${emp.gender=="M"?"男":"女" }</th>
                         <th>${emp.email }</th>
-                        <th>${emp.department.deptName }</th>
+                        <th>${emp.dept.deptName }</th>
                         <th>
                             <button class="btn btn-primary btn-sm">
                                 <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
@@ -111,7 +110,9 @@
             </nav>
         </div>
     </div>
+    <script>
 
+    </script>
 </div>
 </body>
 </html>
